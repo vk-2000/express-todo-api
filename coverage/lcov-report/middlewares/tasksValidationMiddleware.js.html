@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for controllers/tasksController.js</title>
+    <title>Code coverage report for middlewares/tasksValidationMiddleware.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">controllers</a> tasksController.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">middlewares</a> tasksValidationMiddleware.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>31/31</span>
+                <span class='fraction'>25/25</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>31/31</span>
+                <span class='fraction'>25/25</span>
             </div>
         
             
@@ -116,31 +116,46 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -152,10 +167,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,60 +189,70 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const taskServices = require("../services/tasksService");
-const Joi = require("joi");
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const Joi = require("joi");
 const HTTPerror = require("../utils/errors/HTTPerror");
 &nbsp;
-const getAllTasks = async (req, res) =&gt; {
-    const tasks = await taskServices.getAllTasks();
-    res.status(200);
-    res.send(tasks);
-};
-const createTask = async (req, res) =&gt; {
-    const data = req.body;
-    const taskCreated = await taskServices.createTask(data);
-    res.status(201).send(taskCreated);
-};
-const deleteFinishedTasks = async (req, res) =&gt; {
-    await taskServices.deleteFinishedTasks();
-    res.status(204).send({"msg": "Deleted finished tasks"});
-};
+const createTaskSchema = Joi.object({
+    name: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30)
+        .required(),
+    isImportant: Joi.boolean()
+        .required()
+});
 &nbsp;
-const getTaskById = async (req, res) =&gt; {
-    const id = req.params.id;
+const updateTaskSchema = Joi.object({
+    name: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30),
+    isImportant: Joi.boolean(),
+    isComplete: Joi.boolean()
+});
+&nbsp;
+const createTaskValidation = async (req, res, next) =&gt; {
     try{
-        const result = await taskServices.getTaskById(id);
-        res.send(result);
-&nbsp;
+        const data = req.body;
+        const {value, error} = createTaskSchema.validate(data);
+        if(error){
+            throw new HTTPerror(error.message, 400);
+        }
+        next();
     }
     catch(err){
         if(err instanceof HTTPerror){
-            res.status(err.code).send({msg: err.message});
+            res.status(err.code).send(err.message);
         }
         else{
-            res.status(500).send({msg: err.message});
-        }
-&nbsp;
-    }
-};
-const updateTask = async (req, res) =&gt; {
-    const id = req.params.id;
-    try{
-        const updatedTask = await taskServices.updateTask(id, req.body);
-        res.status(200).send(updatedTask);
-    }
-    catch(err) {
-        if(err instanceof HTTPerror){
-            res.status(err.code).send({msg: err.message});
-        }
-        else{
-            res.status(500).send({msg: "Something went wrong"});
+            res.status(500).send(err.message);
         }
     }
     
+};
+&nbsp;
+const updateTaskValidation = (req, res, next) =&gt; {
+&nbsp;
+    try{
+        const data = req.body;
+        const {value, error} = updateTaskSchema.validate(data);
+        if(error){
+            throw new HTTPerror(error.message, 400);
+        }
+        next();
+    }
+    catch(err){
+        if(err instanceof HTTPerror){
+            res.status(err.code).send(err.message);
+        }
+        else{
+            res.status(500).send(err.message);
+        }
+    }
 &nbsp;
 };
-module.exports = {getAllTasks, createTask, deleteFinishedTasks, getTaskById, updateTask};</pre></td></tr></table></pre>
+&nbsp;
+module.exports = {createTaskValidation, createTaskSchema, updateTaskValidation, updateTaskSchema};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

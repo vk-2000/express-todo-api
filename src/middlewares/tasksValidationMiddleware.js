@@ -1,19 +1,29 @@
 const Joi = require("joi");
 const HTTPerror = require("../utils/errors/HTTPerror");
 
+const createTaskSchema = Joi.object({
+    name: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30)
+        .required(),
+    isImportant: Joi.boolean()
+        .required()
+});
+
+const updateTaskSchema = Joi.object({
+    name: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30),
+    isImportant: Joi.boolean(),
+    isComplete: Joi.boolean()
+});
+
 const createTaskValidation = async (req, res, next) => {
     try{
-        const schema = Joi.object({
-            name: Joi.string()
-                .alphanum()
-                .min(3)
-                .max(30)
-                .required(),
-            isImportant: Joi.boolean()
-                .required()
-        });
         const data = req.body;
-        const {value, error} = schema.validate(data);
+        const {value, error} = createTaskSchema.validate(data);
         if(error){
             throw new HTTPerror(error.message, 400);
         }
@@ -30,19 +40,11 @@ const createTaskValidation = async (req, res, next) => {
     
 };
 
-const udateTaskValidation = (req, res, next) => {
+const updateTaskValidation = (req, res, next) => {
 
     try{
-        const schema = Joi.object({
-            name: Joi.string()
-                .alphanum()
-                .min(3)
-                .max(30),
-            isImportant: Joi.boolean(),
-            isComplete: Joi.boolean()
-        });
         const data = req.body;
-        const {value, error} = schema.validate(data);
+        const {value, error} = updateTaskSchema.validate(data);
         if(error){
             throw new HTTPerror(error.message, 400);
         }
@@ -59,4 +61,4 @@ const udateTaskValidation = (req, res, next) => {
 
 };
 
-module.exports = {createTaskValidation, udateTaskValidation};
+module.exports = {createTaskValidation, createTaskSchema, updateTaskValidation, updateTaskSchema};

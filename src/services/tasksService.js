@@ -1,5 +1,5 @@
 const db = require("../models/index");
-const {Task}= require("../models")
+const {Task}= require("../models");
 const HTTPerror = require("../utils/errors/HTTPerror");
 
 const getAllTasks = async () => {
@@ -26,7 +26,7 @@ const getTaskById = async (id) => {
         }
     });
     if(task == null){
-        throw new HTTPerror({msg: "Task not found"}, 404);
+        throw new HTTPerror("Task not found", 404);
     }
     return task;
 };

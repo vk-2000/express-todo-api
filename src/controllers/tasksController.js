@@ -1,30 +1,54 @@
-const taskServices = require("../services/tasksService")
+const taskServices = require("../services/tasksService");
+const Joi = require("joi");
+const HTTPerror = require("../utils/errors/HTTPerror");
 
 const getAllTasks = async (req, res) => {
     const tasks = await taskServices.getAllTasks();
+    res.status(200);
     res.send(tasks);
-}
+};
 const createTask = async (req, res) => {
     const data = req.body;
     const taskCreated = await taskServices.createTask(data);
-    res.status(201);
-    res.send(taskCreated);
-}
+    res.status(201).send(taskCreated);
+};
 const deleteFinishedTasks = async (req, res) => {
     await taskServices.deleteFinishedTasks();
-    res.send({"msg": "Deleted finished tasks"});
-}
+    res.status(204).send({"msg": "Deleted finished tasks"});
+};
 
 const getTaskById = async (req, res) => {
     const id = req.params.id;
-    const result = await taskServices.getTaskById(id);
-    res.send(result);
-}
+    try{
+        const result = await taskServices.getTaskById(id);
+        res.send(result);
+
+    }
+    catch(err){
+        if(err instanceof HTTPerror){
+            res.status(err.code).send({msg: err.message});
+        }
+        else{
+            res.status(500).send({msg: err.message});
+        }
+
+    }
+};
 const updateTask = async (req, res) => {
     const id = req.params.id;
-    const updatedTask = await taskServices.updateTask(id, req.body);
-    res.send(updatedTask);
+    try{
+        const updatedTask = await taskServices.updateTask(id, req.body);
+        res.status(200).send(updatedTask);
+    }
+    catch(err) {
+        if(err instanceof HTTPerror){
+            res.status(err.code).send({msg: err.message});
+        }
+        else{
+            res.status(500).send({msg: "Something went wrong"});
+        }
+    }
     
 
-}
+};
 module.exports = {getAllTasks, createTask, deleteFinishedTasks, getTaskById, updateTask};

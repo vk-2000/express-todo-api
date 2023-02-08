@@ -42,7 +42,7 @@ DA:41,1
 DA:44,2
 DA:45,1
 DA:48,1
-DA:54,1
+DA:52,1
 LF:31
 LH:31
 BRDA:28,0,0,1
@@ -175,7 +175,6 @@ FNDA:1,(anonymous_1)
 FNDA:1,(anonymous_2)
 FNDA:2,(anonymous_3)
 FNDA:2,(anonymous_4)
-DA:1,2
 DA:2,2
 DA:3,2
 DA:5,2
@@ -199,8 +198,8 @@ DA:40,2
 DA:41,1
 DA:43,1
 DA:45,2
-LF:24
-LH:24
+LF:23
+LH:23
 BRDA:28,0,0,1
 BRDA:28,0,1,1
 BRDA:40,1,0,1

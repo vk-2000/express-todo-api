@@ -48,7 +48,5 @@ const updateTask = async (req, res) => {
             res.status(500).send({msg: "Something went wrong"});
         }
     }
-    
-
 };
 module.exports = {getAllTasks, createTask, deleteFinishedTasks, getTaskById, updateTask};

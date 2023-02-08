@@ -1,4 +1,4 @@
-const db = require("../models/index");
+
 const {Task}= require("../models");
 const HTTPerror = require("../utils/errors/HTTPerror");
 

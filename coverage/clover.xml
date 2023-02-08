@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675347429662" clover="3.2.0">
-  <project timestamp="1675347429662" name="All files">
-    <metrics statements="109" coveredstatements="108" conditionals="26" coveredconditionals="23" methods="18" coveredmethods="18" elements="153" coveredelements="149" complexity="0" loc="109" ncloc="109" packages="5" files="6" classes="6"/>
+<coverage generated="1675754130446" clover="3.2.0">
+  <project timestamp="1675754130446" name="All files">
+    <metrics statements="108" coveredstatements="107" conditionals="26" coveredconditionals="23" methods="18" coveredmethods="18" elements="152" coveredelements="148" complexity="0" loc="108" ncloc="108" packages="5" files="6" classes="6"/>
     <package name="controllers">
       <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-      <file name="tasksController.js" path="/Users/Varun_Kumar/Desktop/practice/expressDemo/src/controllers/tasksController.js">
+      <file name="tasksController.js" path="/Users/Varun_Kumar/Desktop/practice/express-todo/src/controllers/tasksController.js">
         <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -36,12 +36,12 @@
         <line num="44" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="45" count="1" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
     <package name="middlewares">
       <metrics statements="25" coveredstatements="25" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
-      <file name="tasksValidationMiddleware.js" path="/Users/Varun_Kumar/Desktop/practice/expressDemo/src/middlewares/tasksValidationMiddleware.js">
+      <file name="tasksValidationMiddleware.js" path="/Users/Varun_Kumar/Desktop/practice/express-todo/src/middlewares/tasksValidationMiddleware.js">
         <metrics statements="25" coveredstatements="25" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -72,7 +72,7 @@
     </package>
     <package name="models">
       <metrics statements="25" coveredstatements="24" conditionals="10" coveredconditionals="7" methods="5" coveredmethods="5"/>
-      <file name="index.js" path="/Users/Varun_Kumar/Desktop/practice/expressDemo/src/models/index.js">
+      <file name="index.js" path="/Users/Varun_Kumar/Desktop/practice/express-todo/src/models/index.js">
         <metrics statements="21" coveredstatements="20" conditionals="10" coveredconditionals="7" methods="3" coveredmethods="3"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -96,7 +96,7 @@
         <line num="41" count="2" type="stmt"/>
         <line num="43" count="2" type="stmt"/>
       </file>
-      <file name="task.js" path="/Users/Varun_Kumar/Desktop/practice/expressDemo/src/models/task.js">
+      <file name="task.js" path="/Users/Varun_Kumar/Desktop/practice/express-todo/src/models/task.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -105,10 +105,9 @@
       </file>
     </package>
     <package name="services">
-      <metrics statements="24" coveredstatements="24" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-      <file name="tasksService.js" path="/Users/Varun_Kumar/Desktop/practice/expressDemo/src/services/tasksService.js">
-        <metrics statements="24" coveredstatements="24" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-        <line num="1" count="2" type="stmt"/>
+      <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+      <file name="tasksService.js" path="/Users/Varun_Kumar/Desktop/practice/express-todo/src/services/tasksService.js">
+        <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -136,7 +135,7 @@
     </package>
     <package name="utils.errors">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="HTTPerror.js" path="/Users/Varun_Kumar/Desktop/practice/expressDemo/src/utils/errors/HTTPerror.js">
+      <file name="HTTPerror.js" path="/Users/Varun_Kumar/Desktop/practice/express-todo/src/utils/errors/HTTPerror.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>

@@ -1,16 +1,16 @@
 const express = require("express");
-const router = express.Router();
+const router = express.Router({mergeParams: true});
 const taskController = require("../controllers/tasksController");
 const {createTaskValidation, updateTaskValidation} = require("../middlewares/tasksValidationMiddleware");
-const {authenticateUser} = require("../middlewares/auth");
+// const {authenticateUser} = require("../middlewares/auth");
 
 
 router.route("/")
-    .get(authenticateUser, taskController.getAllTasks)
-    .post(authenticateUser, createTaskValidation, taskController.createTask)
-    .delete(authenticateUser, taskController.deleteFinishedTasks);
-router.route("/:id")
-    .get(authenticateUser, taskController.getTaskById)
-    .put(authenticateUser, updateTaskValidation, taskController.updateTask);
+    .get(taskController.getAllTasks)
+    .post(createTaskValidation, taskController.createTask)
+    .delete(taskController.deleteFinishedTasks);
+router.route("/:taskId")
+    .get(taskController.getTaskById)
+    .put(updateTaskValidation, taskController.updateTask);
 
 module.exports = router;

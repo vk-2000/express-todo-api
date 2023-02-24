@@ -1,15 +1,27 @@
 
 const {Task}= require("../models");
+const {List} = require("../models");
 const HTTPerror = require("../utils/errors/HTTPerror");
 
-const getAllTasks = async () => {
-    const tasks = await Task.findAll();
-    return tasks;
+const getAllTasks = async (listId) => {
+    const list = await List.findOne({
+        where: {
+            id: listId
+        }
+    });
+    
+    return list.getTasks();
 };
 
-const createTask = async (data) => {
+const createTask = async (listId, data) => {
+    const list = await List.findOne({
+        where: {
+            id: listId
+        }
+    });
     data["isComplete"] = false;
     const task = await Task.create(data);
+    await list.addTask(task);
     return task;
 };
 const deleteFinishedTasks = async () => {

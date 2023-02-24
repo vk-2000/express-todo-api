@@ -11,12 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
         static associate(models) {
             // define association here
+            Task.belongsTo(models.List, {
+                foreignKey: "listId",
+            });
         }
     }
     Task.init({
         name: DataTypes.STRING,
         isComplete: DataTypes.BOOLEAN,
-        isImportant: DataTypes.BOOLEAN
     }, {
         sequelize,
         modelName: "Task",

@@ -7,8 +7,6 @@ const createTaskSchema = Joi.object({
         .min(3)
         .max(30)
         .required(),
-    isImportant: Joi.boolean()
-        .required()
 });
 
 const updateTaskSchema = Joi.object({
@@ -16,7 +14,6 @@ const updateTaskSchema = Joi.object({
         .alphanum()
         .min(3)
         .max(30),
-    isImportant: Joi.boolean(),
     isComplete: Joi.boolean()
 });
 

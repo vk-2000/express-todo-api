@@ -3,13 +3,15 @@ const Joi = require("joi");
 const HTTPerror = require("../utils/errors/HTTPerror");
 
 const getAllTasks = async (req, res) => {
-    const tasks = await taskServices.getAllTasks();
+    const listId = req.params.listId;
+    const tasks = await taskServices.getAllTasks(listId);
     res.status(200);
     res.send(tasks);
 };
 const createTask = async (req, res) => {
     const data = req.body;
-    const taskCreated = await taskServices.createTask(data);
+    const listId = req.params.listId;
+    const taskCreated = await taskServices.createTask(listId, data);
     res.status(201).send(taskCreated);
 };
 const deleteFinishedTasks = async (req, res) => {
